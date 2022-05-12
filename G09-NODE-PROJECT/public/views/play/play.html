@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../logout/logout.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer type="module" src="play.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a href="../../home/home.html"><img src="../../img/logo.png" /></a>
+        <h2>Quiz App</h2>
+      </ul>
+      <ul>
+        <li><a href="../edit/edit.html">Edit quiz</a></li>
+        <li class="active"><a href="play.html">Play quiz</a></li>
+      </ul>
+      <ul>
+        <li class="userName"></li>
+        <li id="logout" onclick="logout()">logout</li> 
+      </ul>
+    </nav>
+
+    <div id="play-view">
+      <div id="start">START QUIZ!</div>
+
+      <div id="quiz" style="display: none">
+      </div>
+  
+      <div id="score" style="display: none">
+        <div id="scor-container">
+          <img id="score_img" width="130px" height="130px"></img>
+          <div>
+            <h2>Your Score</h2>
+            <h1  id="score_p"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

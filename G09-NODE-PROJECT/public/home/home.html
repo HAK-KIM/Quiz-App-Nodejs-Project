@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a href="home.html"><img src="../../img/logo.png" width="500"  /></a>
+        <h2>Quiz App</h2>
+      </ul>
+      <ul>
+        <li><a href="../views/edit/edit.html">Edit quiz</a></li>
+        <li><a href="../views/play/play.html">Play quiz</a></li>
+      </ul>
+      <ul>
+        <li class="userName"></li>
+        <li id="logout" onclick="logout()">logout</li> 
+      </ul>
+    </nav>
+
+    <div id="welcome">
+      <img src="../../img/welcome.png"/>
+    </div>
+  </body>
+
+  <!-- <script src="../views/play/play.js"  type="module"></script> -->
+  <!-- <script src="../views/edit/edit.js"  type="module"></script> -->
+  <script src="home.js"></script>
+  <script src="../logout/logout.js"></script>
+</html>

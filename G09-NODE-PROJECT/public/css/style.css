@@ -1,0 +1,446 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+:root {
+  --main-color: #616061;
+  --main-color-light: rgb(134, 134, 134);
+  --white-color: #ffffff;
+}
+
+/* --------------- COMMON STYLE   ------------------------------------   */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: var(--white-color);
+}
+
+
+button {
+  margin: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  font-family: inherit;
+  background-color: var(--white-color);
+  border: 0px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #f51313;
+
+}
+
+
+/* --------------- WELCOME VIEW    --------------------- ---------------   */
+
+#welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+}
+/* --------------- PLAY VIEW    --------------------- ---------------   */
+
+#play-view {
+  background-color: var(--white-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 87.7vh;
+}
+
+#start {
+  background-color: #9fa8da;
+  box-shadow: 9px 9px 9px 9px rgba(0,0,0,.2);
+  font-family: 'Dongle', sans-serif;
+  border-radius: 10px;
+  padding: 20px 50PX;
+  font-size: 500%;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+#quiz {
+  width: 50%;
+  max-width: 80%;
+  background-color: rgb(178, 199, 243);
+  border-top: 5px solid rgb(108, 108, 241);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#score {
+  background: rgb(178, 199, 243);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  width: 30%;
+  height: 20vh;
+  padding: 2rem 1rem;
+}
+#scor-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+#choices {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+
+}
+#choices button{
+  border: none;
+  /* margin: 10px 10px; */
+  padding:  15px;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 5px;
+  width: 150px;
+}
+#choices button:hover{
+  transform: scale(0.97);
+  background-color: #039be5;
+}
+/* --------------- EDIT VIEW STYLE   ---------------   */
+#questions-view {
+  background-color: var(--white-color);
+  
+ 
+  padding: 2rem;
+  width: 100vw;
+  height: 100%;
+
+}
+#questions-view button{
+  float: right;
+  margin-right: 27px;
+  border-radius: 5px;
+  
+}
+
+#edit-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  margin: 10px 0;
+  padding: 10px;
+  border-top: 5px solid rgb(108, 108, 241);
+  background-color: rgb(178, 199, 243);
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,.4);
+  border-radius: 5px;
+}
+.title{
+  padding: 10px;
+
+  margin-bottom: 20px;
+}
+.ans{
+  border: 1px solid #000000;
+  margin: 10px 10px;
+  padding:  5px;
+  background-color: #1976d2;
+  color: white;
+ 
+}
+.question-info {
+  width: 100%;
+  display: flex;
+ 
+  flex-direction: column;
+  margin: 10px;
+
+
+  
+}
+
+.actions {
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  padding: 5px;
+  cursor: pointer;
+}
+.actions img {
+  width: 35px;
+}
+.actions button{
+  padding: 10px;
+  margin: -10px;
+  background-color: rgb(178, 199, 243);
+}
+.actions button i{
+  font-size: 33px;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(178, 199, 243);
+}
+
+/* ----------------------------- DIALOG   --------------------------   */
+
+#questions-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
+#correct_Ans{
+  margin-left: 20px;
+}
+dialog {
+  position: fixed;
+  top: 10vh;
+  left: 20%;
+  width: 60%;
+  z-index: 100;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+dialog header {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+dialog section {
+  padding: 1rem;
+}
+
+dialog menu {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+dialog label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+}
+.choice{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgb(173, 171, 171);
+  margin: 5px;
+  padding: 0 10px ;
+}
+.choice input[type="radio"] {
+  width: 1.6em;
+  height: 1.6em;
+
+}
+
+input:focus {
+  background-color: #f0e6fd;
+  outline: none;
+  border-color: var(--main-color-light);
+}
+
+/* ----------------------------- MENU (THX GROUP 8 !)   --------------------------   */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(230, 230, 230, 0.904);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  position: sticky;
+  top: 0;
+  color: rgb(0, 0, 0);
+}
+
+ul img {
+  margin-left: 30px;
+}
+
+ul > h2 {
+  margin-left: 30px;
+}
+
+nav img {
+  width: 45px;
+  height: 37px;
+  cursor: pointer;
+}
+ul {
+  display: flex;
+  margin-top: 1%;
+  margin-right: 3%;
+  margin-bottom: 1%;
+}
+
+ul li {
+  list-style: none;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+ul li:hover{
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: rgb(136, 136, 240);
+}
+
+ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+ul li a:hover{
+  text-decoration: none;
+  
+}
+
+.active {
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: rgb(108, 108, 250);
+  color: rgb(255, 255, 255);
+ 
+}
+
+ul h2 {
+  margin-top: 5px;
+}
+
+/* increasBar */
+
+#box-space {
+  width: 100%;
+  height: 10px;
+  border: 1px solid ;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+#box {
+  box-sizing: border-box;
+  background: var(--main-color);
+  position: absolute;
+  width: 0px;
+  height: 10px;
+  border-radius: 5px;
+  left: 0px;
+}
+
+
+
+.choices{
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid;  
+  border-radius: 5px;
+
+
+}
+.choices input[type="radio"] {
+  width: 1.4em;
+  height: 1.6em;
+  
+
+}
+
+.title{
+  font-size: large;
+  font-weight: bold;
+}
+.ans{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.form-group span{
+  font-size: 14px;
+  color: red;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+#submit-error{
+  color: red;
+}
+
+/* login and register */
+.form-container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.form-container:hover{
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+/* user name */
+.userName{
+  border: 2px solid #039be5;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: var(--white-color);
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userName:hover{
+  padding: 3px;
+  margin-left: 5px;
+  background-color: var(--white-color);
+}
